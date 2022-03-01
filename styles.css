@@ -1,0 +1,965 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.note-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.light-grey {
+  color: #323232;
+  background-color: #ececec;
+}
+
+.fixed-size-centered-content {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-footer-text-container-padding {
+  padding: 0.01em 16px;
+}
+
+
+.header-footer-text-container-padding::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header-footer-text-container-padding::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media (max-width: 350px) and (min-width: 200px) {
+  .header-footer-text-container-padding {
+    padding: 0.01em 10px;
+  }
+
+  ol {
+    padding-inline-start: 10px;
+  }
+
+  .ol-list-padding-left-para {
+    padding-left: 0;
+  }
+
+}
+
+
+.padding-footer-header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-center {
+  text-align: center;
+}
+
+.chapter-box-shadow {
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%),
+  0 4px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.chapter-box-margin {
+  margin: 16px;
+}
+
+
+
+
+.color-text-bground {
+  color: #000;
+  background-color: #fff;
+}
+
+/*
+ * Table 1-1, chapter 1, class - disaster-recovery-grid
+ * This is the larger one
+ */
+
+.disaster-recovery-grid {
+  display: grid;
+  outline: 0;
+  background-color: #e4e4e4;
+  grid-gap: 0.1em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+}
+
+
+/*
+ * Table 2-2, chapter 2, class - cross-site-connectivity-options-grid-large
+ * This is the larger one
+ */
+
+
+.cross-site-connectivity-options-grid-large {
+  display: grid;
+  outline: 0;
+  background-color: #e4e4e4;
+  grid-gap: 0.1em;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+}
+
+
+.cross-site-connectivity-options-grid-small {
+  display: grid;
+  outline: 0;
+  background-color: #e4e4e4;
+  grid-gap: 0.1em;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+}
+
+
+
+
+
+
+@media (max-width: 620px) and (min-width: 200px) {
+  .cross-site-connectivity-options-grid-large {
+    display: none;
+  }
+}
+
+@media (min-width: 621px) {
+  .cross-site-connectivity-options-grid-small {
+    display: none;
+  }
+}
+
+
+
+
+/*
+ * Table 2-1, chapter 2, class - distances-link-types-grid-large
+ * 4 columns
+ * Would use the formatting for the entries as written under 
+ * general rule for all classes starting with 'grid-item'
+ * 
+ */
+
+
+.distances-link-types-grid-large {
+  display: grid;
+  outline: 0;
+  background-color: #e4e4e4;
+  grid-gap: 0.1em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+}
+
+
+/*
+ * Table 1-1, chapter 1, class - disaster-recovery-grid
+ * would use the following formatting as the entries all 
+ * start with the words 'grid-item'
+ * Table 2-1 and 2-1 - same thing
+ */
+
+[class^='grid-item'] {
+  display: grid;
+  align-items: center;
+  justify-content: left;
+  outline: 0;
+  height: auto;
+  font-size: 15px;
+  color: whitesmoke;
+  background-color: lightslategray;
+  padding: 5%;
+}
+
+/*
+ * Table 1-1, chapter 1, class - disaster-recovery-grid
+ * the entries have the class of 'grid-item-1' etc
+ * Table 2-1 and 2-2 - have longer names
+ * BUT normall would be white too except the following ... 
+ * they are below the rule setting the grid-item 
+ * to all white 
+ */
+
+
+.grid-item-1 {
+  font-weight: bolder;
+  color: black;
+}
+
+.grid-item-2 {
+  font-weight: bolder;
+  color: black;
+}
+
+.grid-item-3 {
+  font-weight: bolder;
+  color: black;
+}
+
+
+
+
+.grid-item-cross-site-connectivity-options-1 {
+  
+  color: black;
+}
+
+.grid-item-cross-site-connectivity-options-2 {
+  
+  color: black;
+}
+
+.grid-item-cross-site-connectivity-options-3 {
+  
+  color: black;
+}
+
+.grid-item-cross-site-connectivity-options-4 {
+  
+  color: black;
+}
+
+.grid-item-cross-site-connectivity-options-5 {
+ 
+  color: black;
+}
+
+
+
+
+
+/*
+ * Tablelike structure for layout
+ * chapter 2, class - active-grid-large-screen
+ * and one for small screen
+ * the entries have the class of 'grid-item-active1' etc
+ * 
+ * The large one has 2 columns
+ * The small one has 1 column
+ */
+
+
+.active-grid-large-screen {
+  display: grid;
+  outline: 0;
+  background-color: #e4e4e4;
+  grid-gap: 0.1em;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+}
+
+
+.active-grid-small-screen {
+  padding: 0.1em 0;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 0.1em;
+  border-bottom: #000;
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+
+}
+
+/*
+ * Putting the 3 headings in black grid-item-active1, 3, 5
+ */
+
+.grid-item-active1 {
+  font-weight: bolder;
+  color: black;
+}
+
+.grid-item-active3 {
+  font-weight: bolder;
+  color: black;
+}
+
+.grid-item-active5 {
+  font-weight: bolder;
+  color: black;
+}
+
+/*
+ * Putting headings in black
+ */
+
+.grid-item-distances-1 {
+  font-weight: bolder;
+  color: black;
+}
+
+.grid-item-distances-2 {
+  font-weight: bolder;
+  color: black;
+}
+
+.grid-item-distances-3 {
+  font-weight: bolder;
+  color: black;
+}
+
+.grid-item-distances-4 {
+  font-weight: bolder;
+  color: black;
+}
+
+
+/*
+ * Tablelike structure for layout
+ * chapter 2, class - flashcopy-grid-large-screen and 
+ * one for small screen
+ * the entries have the class of 'grid-item-flashcopy1' etc
+ * 
+ * The large one has 2 columns
+ * The small one has 1 column
+ */
+
+
+.flashcopy-grid-large-screen {
+  display: grid;
+  outline: 0;
+  background-color: #e4e4e4;
+  grid-gap: 0.1em;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+}
+
+
+.flashcopy-grid-small-screen {
+  padding: 0.1em 0;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 0.1em;
+  border-bottom: #000;
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+
+}
+
+
+.grid-item-flashcopy1 {
+  color:#000;
+}
+
+.grid-item-flashcopy3 {
+  color:#000;
+}
+
+.grid-item-flashcopy5 {
+  color:#000;
+}
+
+.grid-item-flashcopy7 {
+  color:#000;
+}
+
+.grid-item-flashcopy9 {
+  color:#000;
+}
+
+.grid-item-flashcopy11 {
+  color:#000;
+}
+
+
+/*
+ * Hiding the small tablelike structures
+ * when the screen reaches a minimum of 426px wide
+ */
+
+@media (min-width: 426px) {
+  .active-grid-small-screen {
+    display: none;
+  }
+  .flashcopy-grid-small-screen {
+    display: none;
+  }
+}
+
+/*
+ * Hiding the large Table 1-1 of chapter 1
+ * when the screen reaches a minimum of 200px wide
+ * and a maximum of 425px wide 
+
+ * Hiding the large Table 2-1 of chapter 2
+ */
+
+@media (max-width: 425px) and (min-width: 200px) {
+  .disaster-recovery-grid {
+    display: none;
+
+  }
+
+  .distances-link-types-grid-large {
+    display: none;
+  }
+
+  .active-grid-large-screen {
+    display: none;
+
+  }
+
+  .flashcopy-grid-large-screen {
+    display: none;
+
+  }
+
+  .cross-site-connectivity-options-grid-large {
+    display: none;
+  }
+
+  h2 {
+    font-size: 20px;
+
+  }
+
+  figure {
+    margin: 1em 0;
+}
+
+  .button-type {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .chapter-box-margin {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+/*
+ * Table 1-1 of chapter 1, the smaller version
+ * with only 1 column
+ */
+  
+  .disaster-recovery-grid2 {
+    padding: 0.1em 0;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0.1em;
+    border-bottom: #000;
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
+
+  }
+
+  /*
+ * Table 2-1, chapter, class - distances-link-types-grid-small
+ * 1 column
+ * Would use the formatting for the entries as written under 
+ * general rule for all classes starting with 'grid-item'
+ * 
+ */
+
+  .distances-link-types-grid-small {
+    padding: 0.1em 0;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0.1em;
+    border-bottom: #000;
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
+
+  }
+
+  .grid-item-2 {
+    font-weight: normal;
+    color: whitesmoke;
+  }
+  
+  .grid-item-3 {
+    font-weight: normal;
+    color: whitesmoke;
+  }
+
+  .grid-item-8 {
+    font-weight: bolder;
+    color: black;
+  }
+
+  .grid-item-15 {
+    font-weight: bolder;
+    color: black; 
+  }
+  
+}
+
+/*
+ * Hiding the small Table 1-1 of chapter 1
+ * when the screen reaches a minimum of 426px wide
+ * 
+ * Hiding the small Table 2-1 of chapter 2
+ */
+
+@media (min-width: 426px) {
+  .disaster-recovery-grid2 {
+    display: none;
+  }
+
+  .distances-link-types-grid-large {
+    display: none;
+  }
+}
+
+
+
+.button-type-container {
+  display: inline-block;
+  
+  
+}
+
+.button-type {
+  color: whitesmoke;
+  background-color: #323232;
+  padding: 12px 24px;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  
+}
+
+
+
+.button-type:hover {
+  background-color: #236b7f;
+  color: #fff;
+}
+
+/* Footer */
+
+.footer-background {
+  background-color: #297d94;
+}
+
+.black-tag-bground {
+  color:#fff;
+  background-color: #000;
+}
+
+.tag-margin-bottom {
+  margin-bottom: 16px;
+}
+
+.tag-text-smaller {
+  font-size: 12px;
+}
+
+.image_container {
+  display: grid;
+
+}
+
+
+
+ul {
+  list-style-type: none
+}
+
+.arrows {
+  display: grid;
+  grid-template-columns: 20px auto;
+  justify-content: start;
+  align-items: center;
+}
+
+.arrows::before {
+  content: "▶ ";
+  font-size: 20px;
+  color: #999;
+}
+
+
+.dash::before {
+  content: "– ";
+  font-size: 20px;
+  color: #999;
+  padding-left: 1.2em;
+  
+}
+
+.info_repeated_multiple_chapters {
+  background-color: #999;
+  padding: 0.5em;
+  width: 80%;
+  
+}
+
+.terminology {
+  background-color: #999;
+  padding: 0.5em;
+  width: 80%;
+}
+
+.important-note {
+  background-color: #999;
+  padding: 0.5em;
+  width: 80%;
+}
+
+.main_chapter_heading {
+  padding: 0.01em 16px;
+}
+
+.arrow-link::before {
+  content: "";
+  font-size: 20px;
+  color: #236b7f;
+}
+
+.arrow-link {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 10px;
+  color: #000;
+  min-height: 44px;
+  text-decoration: none;
+  transition: border 0.35s,
+    background-color 0.35s;
+
+}
+
+  /*when a link follows another, give it a border-top*/
+  .arrow-link + .arrow-link {
+    border-top: 1px solid #aaa;
+  }
+
+  .arrow-link:hover {
+    background-color: #236b7f;
+    color: #fff;
+  }
+
+
+  .prev-next {
+    display: inline-flex;
+    float: left;
+    width: 100%;
+    clear: both;
+  
+  }
+
+
+  @media (max-width: 425px) and (min-width: 200px) {
+    .arrows {
+      display: grid;
+  
+    }
+  
+    .arrow-link {
+  
+      font-size: 16px;
+      padding-left: 0;
+      padding-right: 5px;
+    }
+  
+    ul {
+  
+      padding-left: 0;
+    }
+  
+    .arrows::before {
+      content: "▶ ";
+      font-size: 10px;
+      color: #999;
+    }
+
+
+
+  
+  }
+
+    /*when screen size is min of 200 and max of 560 change display of previous and next 'buttons'to grid*/
+@media (min-width: 200px) and (max-width: 560px) {
+
+  .prev-next {
+    display: grid;
+    float: left;
+    width: 100%;
+    clear: both;
+    
+    }
+}
+  
+
+
+/*remove default button styling*/
+.off-canvas-launcher {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #297d94;
+  border-radius: 4px;
+  background: none;
+  padding: 4px 8px;
+  position: relative;
+}
+
+/*if we don't have JavaScript available, no point showing the button*/
+.no-js .off-canvas-launcher {
+  display: none;
+}
+
+/*add some interactivity when the button is clicked*/
+.off-canvas-launcher:active {
+  top: 1px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    width: 25%;
+    height: fit-content;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 5px;
+    color: #ddd;
+    min-height: 44px;
+    text-decoration: none;
+    transition: border 0.35s, background-color 0.35s;
+  }
+
+
+
+  /*when a link follows another, give it a border-top*/
+.nav-link + .nav-link {
+  border-top: 1px solid #aaa;
+}
+
+.nav-link:hover {
+  background-color: #236b7f;
+  color: #fff;
+}
+
+/*add a transition for the left and transform properties and a duration for transitions*/
+.navigation-menu {
+  background-color: #297d94;
+  transition: left, transform 0.4s;
+}
+
+
+/*for smaller screens that support JavaScript by default hide the nav off screen*/
+@media (min-width: 200px) {
+  .js .navigation-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    left: -200px;
+  }
+  /*when the menu button is clicked move the nav back on screen*/
+  .js .OffCanvas-Active .navigation-menu {
+    left: 0;
+  }
+  /*if the browser supports transforms, reset the left property and pull it off screen with a translate */
+  @supports (transform: translateX(-200px)) {
+    .js .navigation-menu {
+      left: auto;
+      transform: translateX(-200px);
+    }
+    /*when transforms are supported and the menu button is clicked, reset the nav to default position*/
+    .js .OffCanvas-Active .navigation-menu {
+      transform: translateX(0);
+    }
+  }
+  @supports (transform: translate3d(-200px, 0, 0)) {
+    /*where transform3d is supported reset left and pull off screen with a translate3d instead*/
+    .js .navigation-menu {
+      left: auto;
+      transform: translate3d(-200px, 0, 0);
+    }
+    /*when transform3d is supported and the menu button is clicked, reset the nav to default position*/
+    .js .OffCanvas-Active .navigation-menu {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+/*for larger screens set the nav to the left and give the main content extra margin to compensate for it*/
+@media (min-width: 800px) {
+  .navigation-menu {
+    left: 0 !important;
+    transform: none !important;
+  }
+  .off-canvas-launcher {
+    display: none;
+  }
+  .main-content {
+    position: relative;
+    margin-left: 200px;
+  }
+  .no-js .main-content {
+    margin-left: 0;
+  }
+}
+
+  .IBM-GDPS-toc-links {
+    color: #aaa;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/*image*/
+
+  img {
+    vertical-align: middle;
+    border-style: none;
+  }
+
+  figure {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+  }
+
+  .IT-infra {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  body {
+    max-width: 100%;
+  }
+
+
+  /*increasing font size of the nav links when reach a min-width */
+
+
+  @media (min-width: 1024px) {
+
+
+    .nav-link {
+      font-size: 1.2rem;
+    }
+
+    [class^='grid-item'] {
+
+      font-size: 1.3rem;
+
+    }
+
+    body {
+      font-size: 1.3rem;
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 1.3rem;
+    }
+
+  }
+
+
+
+
+  .footer-margin-top {
+    margin-top: 20px;
+  }
+
+  .footer-tags {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+  }
+
+  .redbooks-tag1 {
+    background-color: #000;
+    color: red;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .redbooks-tag2 {
+    background-color:red;
+    color: #000;
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 8px;
+    text-align: center;
+  }
+
+  @media (min-width: 800px) {
+    .redbooks-tag1 {
+      display: none;
+    }
+
+    .redbooks-tag2 {
+      display: none;
+    }
+  }
+
+  /* unvisited link */
+  .links-within-text:link {
+    color: red;
+}
+
+/* visited link */
+.links-within-text:visited {
+    color: darkgoldenrod;
+}
+
+/* mouse over link */
+.links-within-text:hover {
+    color: #236b7f;
+}
+
+/* selected link */
+.links-within-text:active {
+    color: blue;
+}
+
+.padding-left-para {
+  padding-left: 1.2em;
+}
+
+
+@media (max-width: 200px) {
+  .padding-left-para {
+    padding-left: 0;
+
+  }
+}
+
+
+@media (max-width: 250px) {
+  h2 {
+    font-size: 16px;
+
+  }
+}
+
+@media (min-width: 800px) {
+  h1 {
+    padding-left: 120px;
+  }
+}
+
+
